@@ -1,0 +1,14 @@
+<% if @number == nil %>
+  <h1>You didn't enter a number. Click <a href="/guess_form_show">here</a> to go back.</h1>
+<% else %>
+  <% @number = @number.to_i %>
+  <h1>You guessed <%= @number %>!</h1>
+  <% if @number == 52 %>
+    <h2>You're correct!</h2>
+  <% elsif @number < 52 %>
+    <h2>Wrong. Try a higher number. Click <a href="/guess_form_show">here</a> to go back.</h2>
+
+  <% elsif @number > 52 %>
+    <h2>Wrong. Try a lower number. Click <a href="/guess_form_show">here</a> to go back.</h2>
+  <% end %>
+<% end %>

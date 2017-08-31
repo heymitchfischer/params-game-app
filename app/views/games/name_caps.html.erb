@@ -1,0 +1,9 @@
+<% if @name == nil %>
+  <h1>Please enter your name.</h1>
+<% else %>
+  <h1>Your name is:</h1>
+  <h2><%= @name.upcase %></h2>
+  <% if @name[0].downcase == 'a' %>
+    <h2>Hey, your name starts with the first letter of the alphabet!</h2>
+  <% end %>
+<% end %>

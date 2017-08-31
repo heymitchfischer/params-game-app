@@ -1,0 +1,13 @@
+<% if @number == nil %>
+  <h1>Guess a number.</h1>
+<% else %>
+  <% @number = @number.to_i %>
+  <h1>You guessed <%= @number %>!</h1>
+  <% if @number == @winning_number %>
+    <h2>You're correct!</h2>
+  <% elsif @number < @winning_number %>
+    <h2>Wrong. Try a higher number.</h2>
+  <% elsif @number > @winning_number %>
+    <h2>Wrong. Try a lower number.</h2>
+  <% end %>
+<% end %>
